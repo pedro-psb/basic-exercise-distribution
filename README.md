@@ -3,8 +3,6 @@
 Especificação e implementação de um [Repositório (software)](https://pt.wikipedia.org/wiki/Reposit%C3%B3rio_(software))
 de exercícios **com resolução** chamado Bed (Basic Exercise Distribution).
 
-Isso NÃO é um trabalho acadêmico.
-
 Esse repositório git contém:
 * Um Manifesto das motivações desse projeto.
 * Especificação do Bed (Basic Exercise Distribution), um novo tipo de repositório para distribuir exercícios (similar a um [repositório rpm](#)).
@@ -37,7 +35,7 @@ TODO: Apresentação geral do projeto, do bed-file, do bed-repo e de workflows p
 1) Contribuidor:
     * Faz um fork e cria uma feature-branch
     * Cria arquivo de exercico no `workdir/` usando a [variação-markdown do GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-    * Faz push para fork e abre PR
+    * Cria commit localmente, faz push para fork e [abre PR no GitHub](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 2) Revisor:
     * Revisa PR, pede/sugere modificações e aprova
 3) Auto-release
@@ -48,7 +46,7 @@ TODO: Apresentação geral do projeto, do bed-file, do bed-repo e de workflows p
         - `bump`, que atualiza a versão (CalVer)
     * Sua aprovação gera:
         - Nova tag no github e publicação dos metadados gerados `BedMetadata.json`
-        - Publicação no pypi da ferramenta `practice-icex-repo` (`pir-cli`)
+        - Publicação no PyPi dos pacotes `bed_lib` e `bed_cli`.
 
 ## Estutura do projeto
 
@@ -56,11 +54,13 @@ TODO: Apresentação geral do projeto, do bed-file, do bed-repo e de workflows p
 # CI
 .github/workflows
 
-# Pasta raíz para utilitarios no gerenciamento de arquivo e do repositório
+# Makefile com comandos para `build`, `publish`, `format` e similares.
 Makefile
+
+# Pasta raíz para utilitarios no gerenciamento de arquivo e do repositório
 tooling/
-    pir-cli/
-    pir-lib/
+    bed_cli/
+    bed_lib/
 
 # Espaço de trabalho para criar exercicio
 workdir/
