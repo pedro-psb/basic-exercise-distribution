@@ -35,22 +35,22 @@ TODO: Apresentação geral do projeto, do bed-file, do bed-repo e de workflows p
 ## Fluxo geral
 
 1) Contribuidor:
-  * Faz um fork e cria uma feature-branch
-  * Cria arquivo de exercico no `workdir/` usando a [variação-markdown do GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-  * Faz push para fork e abre PR
+    * Faz um fork e cria uma feature-branch
+    * Cria arquivo de exercico no `workdir/` usando a [variação-markdown do GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+    * Faz push para fork e abre PR
 2) Revisor:
-  * Revisa PR, pede/sugere modificações e aprova
+    * Revisa PR, pede/sugere modificações e aprova
 3) Auto-release
-  * Em intervalos regulares, CI-bot cria PR de release
-  * O PR de release é resultado de:
-      - `build`, que movimenta `workdir/* -> bed_repo/data/*`.
-      - `publish`, que cria o metadado do repositório `bed_repo/BedMetadata.json`
-      - `bump`, que atualiza a versão (CalVer)
-  * Sua aprovação gera:
-      - Nova tag no github e publicação dos metadados gerados `BedMetadata.json`
-      - Publicação no pypi da ferramenta `practice-icex-repo` (`pir-cli`)
+    * Em intervalos regulares, CI-bot cria PR de release
+    * O PR de release é resultado de:
+        - `build`, que movimenta `workdir/* -> bed_repo/data/*`.
+        - `publish`, que cria o metadado do repositório `bed_repo/BedMetadata.json`
+        - `bump`, que atualiza a versão (CalVer)
+    * Sua aprovação gera:
+        - Nova tag no github e publicação dos metadados gerados `BedMetadata.json`
+        - Publicação no pypi da ferramenta `practice-icex-repo` (`pir-cli`)
 
-## Esturura do projeto
+## Estutura do projeto
 
 ```bash
 # CI
